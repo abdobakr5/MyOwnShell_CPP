@@ -9,13 +9,11 @@ int main() {
   // Uncomment this block to pass the first stage
   bool repeat = true;
   while (repeat) {
+    std::cout << "$ ";
     std::string input;
     std::getline(std::cin, input);
-    if (input == "exit") {
-      repeat = false;
-    } else {
-      std::cout << "$ ";
-      std::cout << input << ": command not found" << std::endl;
-    }
+    std::cout << input << ": command not found" << std::endl;
   }
+  return 0;
 }
+
