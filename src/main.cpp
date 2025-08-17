@@ -14,6 +14,14 @@ int main() {
             if (input == "exit 0") {
                 return 0; 
             }
+
+            if (input.find("echo") == 0)
+            {
+              std::cout << input.substr(5,input.length()) << std::endl;
+              std::cout << "$ ";
+              continue;
+            }
+            
             std::cout << input << ": command not found" << std::endl;
         }
         std::cout << "$ ";
