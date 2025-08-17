@@ -8,8 +8,15 @@ int main() {
 
   // Uncomment this block to pass the first stage
   std::cout << "$ ";
-
-  std::string input;
-  std::getline(std::cin, input);
-  std::cout << input << ": command not found" << std::endl;
+  bool repeat = true;
+  while (repeat) {
+    std::string input;
+    std::getline(std::cin, input);
+    if (input == "exit") {
+      repeat = false;
+    } else {
+      std::cout << input << ": command not found" << std::endl;
+      std::cout << "$ ";
+    }
+  }
 }
