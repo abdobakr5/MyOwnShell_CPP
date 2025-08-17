@@ -7,7 +7,6 @@ int main() {
   std::cerr << std::unitbuf;
 
   // Uncomment this block to pass the first stage
-  std::cout << "$ ";
   bool repeat = true;
   while (repeat) {
     std::string input;
@@ -15,8 +14,8 @@ int main() {
     if (input == "exit") {
       repeat = false;
     } else {
-      std::cout << input << ": command not found" << std::endl;
       std::cout << "$ ";
+      std::cout << input << ": command not found" << std::endl;
     }
   }
 }
